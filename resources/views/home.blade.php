@@ -12,6 +12,7 @@
             <ul>
                 <li><a href="{{ route('home') }}">Главная</a></li>
                 <li><a href="{{ route('array') }}">Товары</a></li>
+                <li><a href="{{ route('report.index')}}">Жалобы</a></li>
             </ul>
         </nav>
     </header>
