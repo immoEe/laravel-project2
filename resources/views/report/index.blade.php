@@ -1,3 +1,4 @@
+
 @extends('layout.main')
 @section('content')
     <div>
@@ -8,7 +9,7 @@
             <div class="report-card">
                 <h1>Заявка №{{ $report->number }}</h1>
                 <p><strong>Описание:</strong> {{ $report->description }}</p>
-                <p><strong>Дата создания:</strong> {{ $report->created_at->format('d.m.Y H:i') }}</p>
+                <p><strong>Дата создания:</strong> {{ $report->created_at ? $report->created_at->format('d.m.Y H:i') : 'Не указано' }}</p>
                 <form method="POST" action="{{ route('report.destroy', $report->id) }}">
                     @method('delete')
                     @csrf
